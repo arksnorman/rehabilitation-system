@@ -1,0 +1,66 @@
+index:
+    path: /
+    controller: App\Controller\SecurityController::index
+
+logout:
+    path: /logout/
+
+dashboard:
+    path: /dashboard/
+    controller: App\Controller\DashboardController::index
+
+
+#Patients crud controller
+patients:
+    path: /patients/
+    controller: App\Controller\PatientController::index
+
+newPatient:
+    path: /patients/new/
+    controller: App\Controller\PatientController::new
+
+showPatient:
+    path: /patients/show/{id}/
+    controller: App\Controller\PatientController::show
+
+editPatient:
+    path: /patients/edit/{id}/
+    controller: App\Controller\PatientController::edit
+
+deletePatient:
+    path: /patients/delete/{id}/
+    controller: App\Controller\PatientController::delete
+
+#Profile controller
+profile:
+    path: /profile/
+    controller: App\Controller\ProfileController::index
+
+users:
+    path: /users/
+
+newUser:
+    path: /users/new/
+
+
+#Therapies crud controller
+therapies:
+    path: /therapies/
+    controller: App\Controller\TherapyController::index
+
+newTherapy:
+    path: /therapies/new/
+    controller: App\Controller\TherapyController::new
+
+showTherapy:
+    path: /therapies/show/{id}/
+    controller: App\Controller\TherapyController::show
+
+editTherapy:
+    path: /therapies/edit/{id}/
+    controller: App\Controller\TherapyController::edit
+
+deleteTherapy:
+    path: /therapies/delete/{id}/
+    controller: App\Controller\TherapyController::delete
+
