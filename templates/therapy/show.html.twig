@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Therapy{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="page-header">Therapy</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <table class="table table-hover table-bordered table-responsive">
+                <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ therapy.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>{{ therapy.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Therapist</th>
+                        <td>{{ therapy.getTherapist.username }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="{{ path('therapies') }}" class="btn btn-primary">Back to therapies list</a>
+            <a href="{{ path('editTherapy', {'id': therapy.id}) }}" class="btn btn-info">
+                <i class="fa fa-edit"></i> Edit
+            </a>
+            <a href="{{ path('deleteTherapy', {'id': therapy.id}) }}" class="btn btn-danger"
+               onclick="return confirm('Are you sure you want to delete this item?');">
+                <i class="fa fa-trash-o"></i> Delete
+            </a>
+        </div>
+    </div>
+{% endblock %}

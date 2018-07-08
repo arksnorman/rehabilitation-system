@@ -5,7 +5,9 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-
+symfony.lock
+composer.lock
+.idea/
 ###> symfony/webpack-encore-pack ###
 /node_modules/
 /public/build/

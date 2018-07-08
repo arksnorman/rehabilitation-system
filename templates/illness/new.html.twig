@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Illness{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="page-header">Create new Illness</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {{ include('illness/_form.html.twig') }}<br>
+            <a href="{{ path('illness_index') }}" class="btn btn-info">Back to illnesses list</a>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}

@@ -36,13 +36,6 @@ profile:
     path: /profile/
     controller: App\Controller\ProfileController::index
 
-users:
-    path: /users/
-
-newUser:
-    path: /users/new/
-
-
 #Therapies crud controller
 therapies:
     path: /therapies/
@@ -64,3 +57,19 @@ deleteTherapy:
     path: /therapies/delete/{id}/
     controller: App\Controller\TherapyController::delete
 
+
+apiTherapies:
+    path: /api/therapies/
+    controller: App\Controller\ApiController::therapies
+
+apiPatients:
+    path: /api/patients/
+    controller: App\Controller\ApiController::patients
+
+apiUsers:
+    path: /api/users/
+    controller: App\Controller\ApiController::users
+
+apiIllnesses:
+    path: /api/illnesses/
+    controller: App\Controller\ApiController::illnesses
